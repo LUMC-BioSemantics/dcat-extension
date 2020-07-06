@@ -224,6 +224,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
@@ -1257,14 +1263,25 @@
     
 
 
+    <!-- http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Guideline -->
+
+    <owl:Class rdf:about="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Guideline">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:comment xml:lang="en">To capture description of a guideline</rdfs:comment>
+        <rdfs:label xml:lang="en">Guideline</rdfs:label>
+        <skos:relatedMatch xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C17564</skos:relatedMatch>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Policy -->
 
     <owl:Class rdf:about="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Policy">
-        <owl:equivalentClass rdf:resource="http://purl.org/dc/terms/Policy"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
-        <rdfs:comment xml:lang="en">Principle or protocol to guide decisions and achieve rational outcomes</rdfs:comment>
+        <rdfs:comment xml:lang="en">To capture description of a policy</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Policy</rdfs:label>
-        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.wikidata.org/entity/Q1156854</skos:closeMatch>
+        <skos:relatedMatch rdf:resource="http://purl.org/dc/terms/Policy"/>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.wikidata.org/entity/Q1156854</skos:relatedMatch>
     </owl:Class>
     
 
@@ -1272,10 +1289,10 @@
     <!-- http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Standard -->
 
     <owl:Class rdf:about="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Standard">
-        <owl:equivalentClass rdf:resource="http://purl.org/dc/terms/Standard"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
-        <rdfs:comment xml:lang="en">A reference point against which other things can be evaluated or compared.</rdfs:comment>
+        <rdfs:comment xml:lang="en">To capture description of a standard</rdfs:comment>
         <rdfs:label xml:lang="en">Standard</rdfs:label>
+        <skos:relatedMatch rdf:resource="http://purl.org/dc/terms/Standard"/>
     </owl:Class>
     
 
@@ -1331,7 +1348,7 @@
     <!-- http://www.w3.org/ns/dcat#Catalog -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
@@ -2196,11 +2213,11 @@
      -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#theme">
-        <skos:definition xml:lang="en">A main category of the resource. A resource can have multiple themes.</skos:definition>
         <rdfs:label xml:lang="it">tema</rdfs:label>
+        <skos:definition xml:lang="en">A main category of the resource. A resource can have multiple themes.</skos:definition>
         <rdfs:comment xml:lang="es">La categoría principal del recurso. Un recurso puede tener varios temas.</rdfs:comment>
-        <rdfs:comment xml:lang="ar">التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد.</rdfs:comment>
         <skos:definition xml:lang="cs">Hlavní téma zdroje. Zdroj může mít více témat.</skos:definition>
+        <rdfs:comment xml:lang="ar">التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد.</rdfs:comment>
         <rdfs:comment xml:lang="it">La categoria principale della risorsa. Una risorsa può avere più temi.</rdfs:comment>
         <skos:scopeNote xml:lang="es">El conjunto de skos:Concepts utilizados para categorizar los recursos están organizados en un skos:ConceptScheme que describe todas las categorías y sus relaciones en el catálogo.</skos:scopeNote>
         <rdfs:comment xml:lang="en">A main category of the resource. A resource can have multiple themes.</rdfs:comment>
@@ -2208,9 +2225,9 @@
         <rdfs:comment xml:lang="ja">データセットの主要カテゴリー。データセットは複数のテーマを持つことができます。</rdfs:comment>
         <rdfs:comment xml:lang="cs">Hlavní téma zdroje. Zdroj může mít více témat.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
-        <rdfs:label xml:lang="el">Θέμα</rdfs:label>
-        <rdfs:label xml:lang="es">tema</rdfs:label>
         <skos:definition xml:lang="fr">La catégorie principale de la ressource. Une ressource peut avoir plusieurs thèmes.</skos:definition>
+        <rdfs:label xml:lang="es">tema</rdfs:label>
+        <rdfs:label xml:lang="el">Θέμα</rdfs:label>
         <skos:editorialNote xml:lang="en">Status: English Definition text modified by DCAT revision team, all except for Italian and Czech translations are pending.</skos:editorialNote>
         <rdfs:label xml:lang="fr">thème</rdfs:label>
         <skos:scopeNote xml:lang="en">The set of skos:Concepts used to categorize the resources are organized in a skos:ConceptScheme describing all the categories and their relations in the catalog.</skos:scopeNote>
