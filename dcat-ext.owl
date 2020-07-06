@@ -1263,6 +1263,17 @@
     
 
 
+    <!-- http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Guideline -->
+
+    <owl:Class rdf:about="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Guideline">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:comment xml:lang="en">To capture description of a guideline</rdfs:comment>
+        <rdfs:label xml:lang="en">Guideline</rdfs:label>
+        <skos:relatedMatch xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C17564</skos:relatedMatch>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Policy -->
 
     <owl:Class rdf:about="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Policy">
@@ -1337,7 +1348,7 @@
     <!-- http://www.w3.org/ns/dcat#Catalog -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
