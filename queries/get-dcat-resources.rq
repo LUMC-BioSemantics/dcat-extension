@@ -1,0 +1,5 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT DISTINCT ?standard  where { 
+	?standard a dcat:Resource .
+}

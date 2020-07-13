@@ -1,0 +1,8 @@
+<https://fairsharing.org/FAIRsharing.p9xm4v> a <http://www.w3.org/ns/dcat#Resource>;
+<http://purl.org/dc/terms/type> <http://purl.org/dc/terms/Standard> .
+
+<https://fairsharing.org/FAIRsharing.kr3215> a <http://www.w3.org/ns/dcat#Resource>;
+<http://purl.org/dc/terms/type> <http://purl.org/dc/terms/Standard> .
+
+
+<https://fairsharing.org/bsg-s001323/> a <http://www.w3.org/ns/dcat#Resource> .

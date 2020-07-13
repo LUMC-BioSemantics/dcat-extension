@@ -1,0 +1,17 @@
+prefix uo: <http://purl.obolibrary.org/obo/uo#>
+prefix efo: <http://www.ebi.ac.uk/efo/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix sio: <http://semanticscience.org/resource/> 
+prefix dcatext: <http://purl.org/biosemantics-lumc/ontologies/dcat-extension/> 
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dcterms: <http://purl.org/dc/terms/>
+
+
+IF {
+   ?res a dcat:Resource.
+   ?res dcterms:type dcterms:Standard.
+   
+}
+THEN {
+   ?res a dcatext:Standard
+}

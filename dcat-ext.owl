@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/ns/dcat/"
      xml:base="http://www.w3.org/ns/dcat/"
+     xmlns:dcatext="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -19,50 +23,83 @@
         <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:comment xml:lang="ja">DCATは、ウェブ上で公開されたデータ・カタログ間の相互運用性の促進を目的とするRDFの語彙です。このドキュメントでは、その利用のために、スキーマを定義し、例を提供します。データ・カタログ内のデータセットを記述するためにDCATを用いると、公開者が、発見可能性を増加させ、アプリケーションが複数のカタログのメタデータを容易に利用できるようになります。さらに、カタログの分散公開を可能にし、複数のサイトにまたがるデータセットの統合検索を促進します。集約されたDCATメタデータは、ディジタル保存を促進するためのマニフェスト・ファイルとして使用できます。</rdfs:comment>
-        <dct:modified>2019</dct:modified>
-        <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1805513099">
-                <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
-                <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
-                <foaf:name>Makx Dekkers</foaf:name>
-            </rdf:Description>
-        </dct:contributor>
-        <rdfs:comment xml:lang="es">DCAT es un vocabulario RDF diseñado para facilitar la interoperabilidad entre catálogos de datos publicados en la Web. Utilizando DCAT para describir datos disponibles en catálogos se aumenta la posibilidad de que sean descubiertos y se permite que las aplicaciones consuman fácilmente los metadatos de varios catálogos.</rdfs:comment>
-        <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1755630817">
-                <foaf:name>Riccardo Albertoni</foaf:name>
-                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
-                <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
-                <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
-            </rdf:Description>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1643152270">
-                <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
-                <foaf:name>Shuji Kamitsuna</foaf:name>
-            </rdf:Description>
-        </dct:contributor>
         <dct:contributor>
             <rdf:Description>
                 <foaf:name>Richard Cyganiak</foaf:name>
             </rdf:Description>
         </dct:contributor>
-        <skos:editorialNote xml:lang="en">English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.</skos:editorialNote>
-        <rdfs:label xml:lang="fr">Le vocabulaire des jeux de données</rdfs:label>
         <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1754478864">
-                <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
-                <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
-                <foaf:name>Jakub Klímek</foaf:name>
+            <rdf:Description>
+                <foaf:name>Boris Villazón-Terrazas</foaf:name>
             </rdf:Description>
         </dct:contributor>
-        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dct:creator>
-            <rdf:Description>
-                <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-                <foaf:name>Fadi Maali</foaf:name>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid337939920">
+                <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+                <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+                <foaf:name>Riccardo Albertoni</foaf:name>
             </rdf:Description>
-        </dct:creator>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description>
+                <sdo:affiliation>
+                    <rdf:Description rdf:nodeID="_:genid400204005">
+                        <foaf:homepage rdf:resource="http://okfn.org"/>
+                        <foaf:name>Open Knowledge Foundation</foaf:name>
+                    </rdf:Description>
+                </sdo:affiliation>
+                <foaf:name>Rufus Pollock</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:modified>2019</dct:modified>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid1934102655">
+                <foaf:name>Andrea Perego</foaf:name>
+                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+                <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description>
+                <foaf:name>David Browning</foaf:name>
+                <sdo:affiliation>
+                    <rdf:Description rdf:nodeID="_:genid897992531">
+                        <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                        <foaf:name>Refinitiv</foaf:name>
+                    </rdf:Description>
+                </sdo:affiliation>
+            </rdf:Description>
+        </dct:contributor>
+        <rdfs:comment xml:lang="es">DCAT es un vocabulario RDF diseñado para facilitar la interoperabilidad entre catálogos de datos publicados en la Web. Utilizando DCAT para describir datos disponibles en catálogos se aumenta la posibilidad de que sean descubiertos y se permite que las aplicaciones consuman fácilmente los metadatos de varios catálogos.</rdfs:comment>
+        <dct:contributor>
+            <rdf:Description>
+                <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <sdo:affiliation>
+                    <rdf:Description rdf:nodeID="_:genid1155607018">
+                        <foaf:homepage rdf:resource="https://csiro.au"/>
+                        <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+                    </rdf:Description>
+                </sdo:affiliation>
+                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
+                <foaf:name>Simon J D Cox</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description>
+                <sdo:affiliation>
+                    <rdf:Description rdf:nodeID="_:genid309837209">
+                        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                        <foaf:name>European Commission, DG DIGIT</foaf:name>
+                    </rdf:Description>
+                </sdo:affiliation>
+                <foaf:name>Vassilios Peristeras</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <skos:editorialNote xml:lang="en">English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.</skos:editorialNote>
+        <rdfs:label xml:lang="fr">Le vocabulaire des jeux de données</rdfs:label>
+        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dct:creator>
             <rdf:Description>
                 <foaf:name>John Erickson</foaf:name>
@@ -72,125 +109,92 @@
         <owl:versionInfo xml:lang="cs">Toto je aktualizovaná kopie slovníku DCAT verze 2.0, převzatá z https://www.w3.org/ns/dcat.ttl</owl:versionInfo>
         <owl:versionInfo xml:lang="en">This is an updated copy of v2.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl</owl:versionInfo>
         <rdfs:comment xml:lang="it">DCAT è un vocabolario RDF progettato per facilitare l&apos;interoperabilità tra i cataloghi di dati pubblicati nel Web. Utilizzando DCAT per descrivere i dataset nei cataloghi di dati, i fornitori migliorano la capacità di individuazione dei dati e abilitano le  applicazioni al consumo di dati provenienti da cataloghi differenti. DCAT permette di decentralizzare la pubblicazione di cataloghi e facilita la ricerca federata dei dataset. L&apos;aggregazione dei metadati federati può fungere da file manifesto per facilitare la conservazione digitale. DCAT è definito all&apos;indirizzo http://www.w3.org/TR/vocab-dcat/. Qualsiasi scostamento tra tale definizione normativa e questo schema è da considerarsi un errore di questo schema.</rdfs:comment>
-        <foaf:maker>
-            <rdf:Description rdf:nodeID="_:genid455888709">
-                <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
-                <foaf:name>Government Linked Data WG</foaf:name>
-            </rdf:Description>
-        </foaf:maker>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-24</dct:modified>
         <rdfs:label xml:lang="it">Il vocabolario del catalogo dei dati</rdfs:label>
-        <rdfs:label xml:lang="ja">データ・カタログ語彙（DCAT）</rdfs:label>
-        <rdfs:label xml:lang="cs">Slovník pro datové katalogy</rdfs:label>
         <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1778822793">
-                <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
-                <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
-                <foaf:name>Phil Archer</foaf:name>
-                <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
-            </rdf:Description>
-        </dct:contributor>
-        <owl:versionInfo xml:lang="es">Esta es una copia del vocabulario DCAT v2.0 disponible en https://www.w3.org/ns/dcat.ttl</owl:versionInfo>
-        <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1029062645">
+            <rdf:Description rdf:nodeID="_:genid1620456448">
+                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+                <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
                 <sdo:affiliation>
-                    <rdf:Description rdf:nodeID="_:genid1199541158">
+                    <rdf:Description rdf:nodeID="_:genid332147986">
                         <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
                         <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
                     </rdf:Description>
                 </sdo:affiliation>
                 <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
-                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
-                <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
             </rdf:Description>
         </dct:contributor>
-        <rdfs:comment xml:lang="en">DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.</rdfs:comment>
-        <dct:contributor>
-            <rdf:Description>
-                <foaf:name>David Browning</foaf:name>
-                <sdo:affiliation>
-                    <rdf:Description rdf:nodeID="_:genid1635590606">
-                        <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
-                        <foaf:name>Refinitiv</foaf:name>
-                    </rdf:Description>
-                </sdo:affiliation>
-            </rdf:Description>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description rdf:nodeID="_:genid1842877315">
-                <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
-                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
-                <foaf:name>Andrea Perego</foaf:name>
-            </rdf:Description>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description>
-                <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
-                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-                <sdo:affiliation>
-                    <rdf:Description rdf:nodeID="_:genid1832498284">
-                        <foaf:homepage rdf:resource="https://csiro.au"/>
-                        <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
-                    </rdf:Description>
-                </sdo:affiliation>
-                <foaf:name>Simon J D Cox</foaf:name>
-                <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
-            </rdf:Description>
-        </dct:contributor>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-28</dct:modified>
-        <dct:contributor>
-            <rdf:Description>
-                <foaf:name>Marios Meimaris</foaf:name>
-            </rdf:Description>
-        </dct:contributor>
-        <rdfs:comment xml:lang="fr">DCAT est un vocabulaire développé pour faciliter l&apos;interopérabilité entre les jeux de données publiées sur le Web. En utilisant DCAT pour décrire les jeux de données dans les catalogues de données, les fournisseurs de données augmentent leur découverte et permettent que les applications facilement les métadonnées de plusieurs catalogues. Il permet en plus la publication décentralisée des catalogues et facilitent la recherche fédérée des données entre plusieurs sites. Les métadonnées DCAT aggrégées peuvent servir comme un manifeste pour faciliter la préservation digitale des ressources. DCAT est définie à l&apos;adresse http://www.w3.org/TR/vocab-dcat/. Une quelconque version de ce document normatif et ce vocabulaire est une erreur dans ce vocabulaire.</rdfs:comment>
-        <dct:contributor>
-            <rdf:Description>
-                <foaf:name>Rufus Pollock</foaf:name>
-                <sdo:affiliation>
-                    <rdf:Description rdf:nodeID="_:genid310974187">
-                        <foaf:homepage rdf:resource="http://okfn.org"/>
-                        <foaf:name>Open Knowledge Foundation</foaf:name>
-                    </rdf:Description>
-                </sdo:affiliation>
-            </rdf:Description>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description>
-                <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-                <foaf:name>Ghislain Auguste Atemezing</foaf:name>
-            </rdf:Description>
-        </dct:contributor>
-        <rdfs:comment xml:lang="el">Το DCAT είναι ένα RDF λεξιλόγιο που σχεδιάσθηκε για να κάνει εφικτή τη διαλειτουργικότητα μεταξύ καταλόγων δεδομένων στον Παγκόσμιο Ιστό. Χρησιμοποιώντας το DCAT για την περιγραφή συνόλων δεδομένων, οι εκδότες αυτών αυξάνουν την ανακαλυψιμότητα και επιτρέπουν στις εφαρμογές την εύκολη κατανάλωση μεταδεδομένων από πολλαπλούς καταλόγους. Επιπλέον, δίνει τη δυνατότητα για αποκεντρωμένη έκδοση και διάθεση καταλόγων και επιτρέπει δυνατότητες ενοποιημένης αναζήτησης μεταξύ διαφορετικών πηγών. Συγκεντρωτικά μεταδεδομένα που έχουν περιγραφεί με το DCAT μπορούν να χρησιμοποιηθούν σαν ένα δηλωτικό αρχείο (manifest file) ώστε να διευκολύνουν την ψηφιακή συντήρηση.</rdfs:comment>
-        <dct:contributor>
-            <rdf:Description>
-                <foaf:name>Vassilios Peristeras</foaf:name>
-                <sdo:affiliation>
-                    <rdf:Description rdf:nodeID="_:genid1428486108">
-                        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
-                        <foaf:name>European Commission, DG DIGIT</foaf:name>
-                    </rdf:Description>
-                </sdo:affiliation>
-            </rdf:Description>
-        </dct:contributor>
-        <rdfs:label xml:lang="ar">أنطولوجية فهارس قوائم البيانات</rdfs:label>
+        <rdfs:label xml:lang="ja">データ・カタログ語彙（DCAT）</rdfs:label>
         <dct:contributor>
             <rdf:Description>
                 <foaf:name>Martin Alvarez-Espinar</foaf:name>
             </rdf:Description>
         </dct:contributor>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-12-19</dct:modified>
         <dct:contributor>
             <rdf:Description>
-                <foaf:name>Boris Villazón-Terrazas</foaf:name>
+                <foaf:name>Marios Meimaris</foaf:name>
             </rdf:Description>
         </dct:contributor>
+        <rdfs:label xml:lang="cs">Slovník pro datové katalogy</rdfs:label>
+        <owl:versionInfo xml:lang="es">Esta es una copia del vocabulario DCAT v2.0 disponible en https://www.w3.org/ns/dcat.ttl</owl:versionInfo>
+        <rdfs:comment xml:lang="en">DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.</rdfs:comment>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-28</dct:modified>
+        <rdfs:comment xml:lang="fr">DCAT est un vocabulaire développé pour faciliter l&apos;interopérabilité entre les jeux de données publiées sur le Web. En utilisant DCAT pour décrire les jeux de données dans les catalogues de données, les fournisseurs de données augmentent leur découverte et permettent que les applications facilement les métadonnées de plusieurs catalogues. Il permet en plus la publication décentralisée des catalogues et facilitent la recherche fédérée des données entre plusieurs sites. Les métadonnées DCAT aggrégées peuvent servir comme un manifeste pour faciliter la préservation digitale des ressources. DCAT est définie à l&apos;adresse http://www.w3.org/TR/vocab-dcat/. Une quelconque version de ce document normatif et ce vocabulaire est une erreur dans ce vocabulaire.</rdfs:comment>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid1876498888">
+                <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+                <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+                <foaf:name>Jakub Klímek</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <rdfs:comment xml:lang="el">Το DCAT είναι ένα RDF λεξιλόγιο που σχεδιάσθηκε για να κάνει εφικτή τη διαλειτουργικότητα μεταξύ καταλόγων δεδομένων στον Παγκόσμιο Ιστό. Χρησιμοποιώντας το DCAT για την περιγραφή συνόλων δεδομένων, οι εκδότες αυτών αυξάνουν την ανακαλυψιμότητα και επιτρέπουν στις εφαρμογές την εύκολη κατανάλωση μεταδεδομένων από πολλαπλούς καταλόγους. Επιπλέον, δίνει τη δυνατότητα για αποκεντρωμένη έκδοση και διάθεση καταλόγων και επιτρέπει δυνατότητες ενοποιημένης αναζήτησης μεταξύ διαφορετικών πηγών. Συγκεντρωτικά μεταδεδομένα που έχουν περιγραφεί με το DCAT μπορούν να χρησιμοποιηθούν σαν ένα δηλωτικό αρχείο (manifest file) ώστε να διευκολύνουν την ψηφιακή συντήρηση.</rdfs:comment>
+        <rdfs:label xml:lang="ar">أنطولوجية فهارس قوائم البيانات</rdfs:label>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-12-19</dct:modified>
         <rdfs:comment xml:lang="cs">DCAT je RDF slovník navržený pro zprostředkování interoperability mezi datovými katalogy publikovanými na Webu. Poskytovatelé dat používáním slovníku DCAT pro popis datových sad v datových katalozích zvyšují jejich dohledatelnost a umožňují aplikacím konzumovat metadata z více katalogů. Dále je umožňena decentralizovaná publikace katalogů a federované dotazování na datové sady napříč katalogy. Agregovaná DCAT metadata mohou také sloužit jako průvodka umožňující digitální uchování informace. DCAT je definován na http://www.w3.org/TR/vocab-dcat/. Jakýkoliv nesoulad mezi odkazovaným dokumentem a tímto schématem je chybou v tomto schématu.</rdfs:comment>
         <rdfs:label xml:lang="el">Το λεξιλόγιο των καταλόγων δεδομένων</rdfs:label>
+        <dct:creator>
+            <rdf:Description>
+                <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+                <foaf:name>Fadi Maali</foaf:name>
+            </rdf:Description>
+        </dct:creator>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-20</dct:modified>
         <rdfs:label xml:lang="en">The data catalog vocabulary</rdfs:label>
         <rdfs:label xml:lang="es">El vocabulario de catálogo de datos</rdfs:label>
+        <foaf:maker>
+            <rdf:Description rdf:nodeID="_:genid1736540995">
+                <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+                <foaf:name>Government Linked Data WG</foaf:name>
+            </rdf:Description>
+        </foaf:maker>
         <rdfs:comment xml:lang="ar">هي أنطولوجية تسهل تبادل البيانات بين مختلف الفهارس على الوب. استخدام هذه الأنطولوجية يساعد على اكتشاف قوائم  البيانات المنشورة على الوب و يمكن التطبيقات المختلفة من الاستفادة أتوماتيكيا من البيانات المتاحة من مختلف الفهارس.</rdfs:comment>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid688948444">
+                <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+                <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+                <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+                <foaf:name>Phil Archer</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description>
+                <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+                <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid1806061770">
+                <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+                <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+                <foaf:name>Makx Dekkers</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
+        <dct:contributor>
+            <rdf:Description rdf:nodeID="_:genid14044518">
+                <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+                <foaf:name>Shuji Kamitsuna</foaf:name>
+            </rdf:Description>
+        </dct:contributor>
     </owl:Ontology>
     
 
@@ -215,6 +219,12 @@
     <!-- http://schema.org/rangeIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -995,6 +1005,12 @@
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/type"/>
     
 
 
@@ -1818,21 +1834,17 @@
         <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
         <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid20">
-                <foaf:homepage rdf:resource="https://csiro.au"/>
-                <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+            <rdf:Description rdf:nodeID="_:genid21">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
             </rdf:Description>
         </sdo:affiliation>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
-        <foaf:name>Simon J D Cox</foaf:name>
-        <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid21">
-        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
-        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
-        <foaf:name>Makx Dekkers</foaf:name>
+        <foaf:name>Rufus Pollock</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="_:genid22">
         <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
@@ -1841,21 +1853,18 @@
         <foaf:name>Riccardo Albertoni</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:name>Richard Cyganiak</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="_:genid24">
-        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
-        <foaf:name>Shuji Kamitsuna</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid25">
         <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
         <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
         <foaf:name>Jakub Klímek</foaf:name>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid26">
+    <rdf:Description rdf:nodeID="_:genid25">
         <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
         <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid27">
+            <rdf:Description rdf:nodeID="_:genid26">
                 <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
                 <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
             </rdf:Description>
@@ -1863,20 +1872,116 @@
         <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
         <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid28">
-        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
-        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
-        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
-        <foaf:name>Phil Archer</foaf:name>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid29">
+    <rdf:Description>
+        <foaf:name>Martin Alvarez-Espinar</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid32">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid33">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid35">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid36">
         <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
         <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
         <foaf:name>Andrea Perego</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid31">
+            <rdf:Description rdf:nodeID="_:genid38">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid40">
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid41">
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid42">
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid45">
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid46">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid47">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid52">
                 <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
                 <foaf:name>Refinitiv</foaf:name>
             </rdf:Description>
@@ -1885,104 +1990,12 @@
     </rdf:Description>
     <rdf:Description>
         <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid33">
+            <rdf:Description rdf:nodeID="_:genid54">
                 <foaf:homepage rdf:resource="http://okfn.org"/>
                 <foaf:name>Open Knowledge Foundation</foaf:name>
             </rdf:Description>
         </sdo:affiliation>
         <foaf:name>Rufus Pollock</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Marios Meimaris</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid36">
-                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
-                <foaf:name>European Commission, DG DIGIT</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Vassilios Peristeras</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Boris Villazón-Terrazas</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Martin Alvarez-Espinar</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>John Erickson</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-        <foaf:name>Fadi Maali</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid42">
-        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
-        <foaf:name>Government Linked Data WG</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-        <foaf:name>Fadi Maali</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
-        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
-        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
-        <foaf:name>Phil Archer</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
-        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
-        <foaf:name>Makx Dekkers</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
-        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
-        <foaf:name>Makx Dekkers</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid49">
-                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
-                <foaf:name>European Commission, DG DIGIT</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Vassilios Peristeras</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid50">
-        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
-        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
-        <foaf:name>Riccardo Albertoni</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid52">
-                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
-                <foaf:name>European Commission, DG DIGIT</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Vassilios Peristeras</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid53">
-        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
-        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
-        <foaf:name>Riccardo Albertoni</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
-        <foaf:name>Andrea Perego</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <sdo:affiliation>
@@ -1994,53 +2007,14 @@
         <foaf:name>David Browning</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid58">
-                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
-                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
-        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid60">
-                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
-                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
-        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
-        <foaf:name>Andrea Perego</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid64">
-                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
-                <foaf:name>European Commission, DG DIGIT</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Vassilios Peristeras</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
-        <foaf:name>Andrea Perego</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
@@ -2053,139 +2027,138 @@
         <foaf:name>Makx Dekkers</foaf:name>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid63">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
         <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
         <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
         <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
         <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid66">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+        <foaf:name>Jakub Klímek</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <sdo:affiliation>
             <rdf:Description rdf:nodeID="_:genid71">
-                <foaf:homepage rdf:resource="http://okfn.org"/>
-                <foaf:name>Open Knowledge Foundation</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Rufus Pollock</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
-        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid74">
-                <foaf:homepage rdf:resource="http://okfn.org"/>
-                <foaf:name>Open Knowledge Foundation</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Rufus Pollock</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid76">
-                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
-                <foaf:name>Refinitiv</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>David Browning</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
-        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
-        <foaf:name>Jakub Klímek</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
-        <foaf:name>Shuji Kamitsuna</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid80">
-                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
-                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
-        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid82">
-                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
-                <foaf:name>Refinitiv</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>David Browning</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid84">
-                <foaf:homepage rdf:resource="http://okfn.org"/>
-                <foaf:name>Open Knowledge Foundation</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Rufus Pollock</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
-        <foaf:name>Government Linked Data WG</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
-        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
-        <foaf:name>Jakub Klímek</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid88">
-                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
-                <foaf:name>Refinitiv</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>David Browning</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid90">
-                <foaf:homepage rdf:resource="http://okfn.org"/>
-                <foaf:name>Open Knowledge Foundation</foaf:name>
-            </rdf:Description>
-        </sdo:affiliation>
-        <foaf:name>Rufus Pollock</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-        <foaf:name>Fadi Maali</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-        <foaf:name>Fadi Maali</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid94">
                 <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
                 <foaf:name>European Commission, DG DIGIT</foaf:name>
             </rdf:Description>
         </sdo:affiliation>
         <foaf:name>Vassilios Peristeras</foaf:name>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid95">
-        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
-        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
-        <foaf:name>Riccardo Albertoni</foaf:name>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid73">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="_:genid96">
-        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
-        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
-        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
-        <foaf:name>Riccardo Albertoni</foaf:name>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid78">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid81">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
         <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid87">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
@@ -2198,38 +2171,23 @@
         <foaf:name>Jakub Klímek</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
-        <foaf:name>Shuji Kamitsuna</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
-        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
-        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
-        <foaf:name>Phil Archer</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
         <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
         <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
         <foaf:name>Andrea Perego</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
-        <foaf:name>Government Linked Data WG</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
         <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
         <foaf:name>Shuji Kamitsuna</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
-        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
-        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
-        <foaf:name>Phil Archer</foaf:name>
+        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+        <foaf:name>Jakub Klímek</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
         <sdo:affiliation>
-            <rdf:Description rdf:nodeID="_:genid107">
+            <rdf:Description rdf:nodeID="_:genid96">
                 <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
                 <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
             </rdf:Description>
@@ -2242,18 +2200,322 @@
         <foaf:name>Government Linked Data WG</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
-        <foaf:name>Fadi Maali</foaf:name>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid99">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid103">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid104">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid106">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
         <foaf:name>Shuji Kamitsuna</foaf:name>
     </rdf:Description>
     <rdf:Description>
+        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+        <foaf:name>Jakub Klímek</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid111">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid115">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid117">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid119">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid122">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid124">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid126">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid129">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid131">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid132">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.andrea-perego.name/foaf/#me"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+        <foaf:name>Andrea Perego</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+        <foaf:name>Jakub Klímek</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid137">
+                <foaf:homepage rdf:resource="http://www.refinitiv.com"/>
+                <foaf:name>Refinitiv</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>David Browning</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
+        <rdfs:seeAlso rdf:resource="https://jakub.klímek.com/#me"/>
+        <foaf:name>Jakub Klímek</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid141">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid144">
+                <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
+                <foaf:name>Science and Technology Facilities Council, UK</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:name>Alejandra Gonzalez-Beltran</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid146">
+                <foaf:homepage rdf:resource="http://okfn.org"/>
+                <foaf:name>Open Knowledge Foundation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Rufus Pollock</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://fadmaa.me/foaf.ttl"/>
+        <foaf:name>Fadi Maali</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+        <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+        <foaf:name>Makx Dekkers</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:seeAlso rdf:resource="http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf"/>
+        <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid152">
+                <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+                <foaf:name>European Commission, DG DIGIT</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <foaf:name>Vassilios Peristeras</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_:genid153">
+        <foaf:homepage rdf:resource="http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni"/>
+        <foaf:homepage rdf:resource="https://w3id.org/people/ralbertoni/"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0001-5648-2713"/>
+        <foaf:name>Riccardo Albertoni</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+        <sdo:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+        <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+        <foaf:name>Phil Archer</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.w3.org/2011/gld/"/>
+        <foaf:name>Government Linked Data WG</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
         <foaf:name>John Erickson</foaf:name>
     </rdf:Description>
     <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
         <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Martin Alvarez-Espinar</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:name>Martin Alvarez-Espinar</foaf:name>
@@ -2262,10 +2524,49 @@
         <foaf:name>Marios Meimaris</foaf:name>
     </rdf:Description>
     <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
         <foaf:name>Boris Villazón-Terrazas</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Martin Alvarez-Espinar</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:name>Marios Meimaris</foaf:name>
@@ -2277,37 +2578,76 @@
         <foaf:name>Martin Alvarez-Espinar</foaf:name>
     </rdf:Description>
     <rdf:Description>
-        <foaf:name>Marios Meimaris</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Richard Cyganiak</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
         <foaf:name>Martin Alvarez-Espinar</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>John Erickson</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Martin Alvarez-Espinar</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Marios Meimaris</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Richard Cyganiak</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>Richard Cyganiak</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>John Erickson</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:name>John Erickson</foaf:name>
     </rdf:Description>
     <rdf:Description>
         <foaf:name>Boris Villazón-Terrazas</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Richard Cyganiak</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Marios Meimaris</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Martin Alvarez-Espinar</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>John Erickson</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:name>Martin Alvarez-Espinar</foaf:name>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid196">
+                <foaf:homepage rdf:resource="https://csiro.au"/>
+                <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
+        <foaf:name>Simon J D Cox</foaf:name>
+        <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid198">
+                <foaf:homepage rdf:resource="https://csiro.au"/>
+                <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
+        <foaf:name>Simon J D Cox</foaf:name>
+        <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid200">
+                <foaf:homepage rdf:resource="https://csiro.au"/>
+                <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
+        <foaf:name>Simon J D Cox</foaf:name>
+        <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <sdo:affiliation>
+            <rdf:Description rdf:nodeID="_:genid202">
+                <foaf:homepage rdf:resource="https://csiro.au"/>
+                <foaf:name>Commonwealth Scientific and Industrial Research Organisation</foaf:name>
+            </rdf:Description>
+        </sdo:affiliation>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0002-3884-3420"/>
+        <foaf:name>Simon J D Cox</foaf:name>
+        <foaf:workInfoHomepage rdf:resource="http://people.csiro.au/Simon-Cox"/>
     </rdf:Description>
     
 
@@ -2324,18 +2664,18 @@
         <rdfs:label xml:lang="it">tema</rdfs:label>
         <skos:definition xml:lang="en">A main category of the resource. A resource can have multiple themes.</skos:definition>
         <rdfs:comment xml:lang="es">La categoría principal del recurso. Un recurso puede tener varios temas.</rdfs:comment>
-        <skos:definition xml:lang="cs">Hlavní téma zdroje. Zdroj může mít více témat.</skos:definition>
         <rdfs:comment xml:lang="ar">التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد.</rdfs:comment>
-        <rdfs:comment xml:lang="it">La categoria principale della risorsa. Una risorsa può avere più temi.</rdfs:comment>
+        <skos:definition xml:lang="cs">Hlavní téma zdroje. Zdroj může mít více témat.</skos:definition>
         <skos:scopeNote xml:lang="es">El conjunto de skos:Concepts utilizados para categorizar los recursos están organizados en un skos:ConceptScheme que describe todas las categorías y sus relaciones en el catálogo.</skos:scopeNote>
+        <rdfs:comment xml:lang="it">La categoria principale della risorsa. Una risorsa può avere più temi.</rdfs:comment>
         <rdfs:comment xml:lang="en">A main category of the resource. A resource can have multiple themes.</rdfs:comment>
         <skos:scopeNote xml:lang="it">Il set di concetti skos usati per categorizzare le risorse sono organizzati in skos:ConceptScheme che descrive tutte le categorie e le loro relazioni nel catalogo.</skos:scopeNote>
         <rdfs:comment xml:lang="ja">データセットの主要カテゴリー。データセットは複数のテーマを持つことができます。</rdfs:comment>
         <rdfs:comment xml:lang="cs">Hlavní téma zdroje. Zdroj může mít více témat.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
-        <skos:definition xml:lang="fr">La catégorie principale de la ressource. Une ressource peut avoir plusieurs thèmes.</skos:definition>
-        <rdfs:label xml:lang="es">tema</rdfs:label>
         <rdfs:label xml:lang="el">Θέμα</rdfs:label>
+        <rdfs:label xml:lang="es">tema</rdfs:label>
+        <skos:definition xml:lang="fr">La catégorie principale de la ressource. Une ressource peut avoir plusieurs thèmes.</skos:definition>
         <skos:editorialNote xml:lang="en">Status: English Definition text modified by DCAT revision team, all except for Italian and Czech translations are pending.</skos:editorialNote>
         <rdfs:label xml:lang="fr">thème</rdfs:label>
         <skos:scopeNote xml:lang="en">The set of skos:Concepts used to categorize the resources are organized in a skos:ConceptScheme describing all the categories and their relations in the catalog.</skos:scopeNote>
@@ -2351,9 +2691,55 @@
         <rdfs:comment xml:lang="el">Η κύρια κατηγορία του συνόλου δεδομένων. Ένα σύνολο δεδομένων δύναται να έχει πολλαπλά θέματα.</rdfs:comment>
         <skos:definition xml:lang="ar">التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد.</skos:definition>
         <skos:scopeNote xml:lang="el">Το σετ των skos:Concepts που χρησιμοποιείται για να κατηγοριοποιήσει τα σύνολα δεδομένων είναι οργανωμένο εντός ενός skos:ConceptScheme που περιγράφει όλες τις κατηγορίες και τις σχέσεις αυτών στον κατάλογο.</skos:scopeNote>
-        <skos:definition xml:lang="it">La categoria principale della risorsa. Una risorsa può avere più temi.</skos:definition>
         <rdfs:label xml:lang="cs">téma</rdfs:label>
+        <skos:definition xml:lang="it">La categoria principale della risorsa. Una risorsa può avere più temi.</skos:definition>
         <skos:scopeNote xml:lang="cs">Sada instancí třídy skos:Concept použitá pro kategorizaci zdrojů je organizována do schématu konceptů skos:ConceptScheme, které popisuje všechny kategorie v katalogu a jejich vztahy.</skos:scopeNote>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">standards</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/ns/dcat/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Standard"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/ns/dcat/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 

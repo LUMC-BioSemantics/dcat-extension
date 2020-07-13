@@ -1,0 +1,5 @@
+PREFIX dcatext: <http://purl.org/biosemantics-lumc/ontologies/dcat-extension/> 
+
+SELECT DISTINCT ?standard  where { 
+	?standard a dcatext:Standard .
+}
