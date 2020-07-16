@@ -99,6 +99,41 @@ xsd:duration a rdfs:Datatype .
 # #################################################################
 # 
 # 
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/guideline
+
+dcatext:guideline a owl:ObjectProperty ;
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Guideline .
+# 
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/mapping
+
+dcatext:mapping a owl:ObjectProperty ;
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Mapping .
+# 
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/policy
+
+dcatext:policy a owl:ObjectProperty ;
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Policy .
+# 
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/standard
+
+dcatext:standard a owl:ObjectProperty ;
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Standard .
+# 
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/workflow
+
+dcatext:workflow a owl:ObjectProperty ;
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Workflow .
+# 
 # http://purl.org/dc/terms/format
 
 dct:format a owl:ObjectProperty .
