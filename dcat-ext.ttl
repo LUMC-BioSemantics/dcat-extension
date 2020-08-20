@@ -102,7 +102,9 @@ xsd:duration a rdfs:Datatype .
 # http://purl.org/biosemantics-lumc/ontologies/dcat-extension/biobank
 
 dcatext:biobank a owl:ObjectProperty ;
-	rdfs:subPropertyOf dct:hasPart .
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Biobank .
 # 
 # http://purl.org/biosemantics-lumc/ontologies/dcat-extension/guideline
 
@@ -121,7 +123,9 @@ dcatext:mapping a owl:ObjectProperty ;
 # http://purl.org/biosemantics-lumc/ontologies/dcat-extension/patientRegistry
 
 dcatext:patientRegistry a owl:ObjectProperty ;
-	rdfs:subPropertyOf dct:hasPart .
+	rdfs:subPropertyOf dct:hasPart ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcatext:Patient_registry .
 # 
 # http://purl.org/biosemantics-lumc/ontologies/dcat-extension/policy
 
