@@ -125,7 +125,7 @@ dcatext:mapping a owl:ObjectProperty ;
 dcatext:patientRegistry a owl:ObjectProperty ;
 	rdfs:subPropertyOf dct:hasPart ;
 	rdfs:domain dcat:Catalog ;
-	rdfs:range dcatext:Patient_registry .
+	rdfs:range dcatext:PatientRegistry .
 # 
 # http://purl.org/biosemantics-lumc/ontologies/dcat-extension/policy
 
@@ -559,9 +559,9 @@ dcatext:Mapping a owl:Class ;
 	rdfs:label "Mapping"^^xsd:string ;
 	skos:relatedMatch "http://purl.obolibrary.org/obo/NCIT_C142485"^^xsd:anyURI .
 # 
-# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Patient_registry
+# http://purl.org/biosemantics-lumc/ontologies/dcat-extension/PatientRegistry
 
-dcatext:Patient_registry a owl:Class ;
+dcatext:PatientRegistry a owl:Class ;
 	rdfs:subClassOf dcat:Resource ;
 	rdfs:comment "This class is used to describe a patient registry."@en ;
 	rdfs:label "Patient registry"@en .
@@ -810,36 +810,33 @@ foaf:Person a owl:Class .
 <https://w3id.org/people/ralbertoni/> a owl:NamedIndividual .
 # 
 
-_:genid11 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid12 .
+_:genid11 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
 
-_:genid12 foaf:homepage <http://stfc.ac.uk> ;
-	foaf:name "Science and Technology Facilities Council, UK" .
+_:genid12 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
 
-_:genid11 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-	foaf:name "Alejandra Gonzalez-Beltran" .
+_:genid13 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
 
-_:genid13 foaf:homepage <https://jakub.klímek.com/> ;
+_:genid14 foaf:homepage <https://jakub.klímek.com/> ;
 	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
 	foaf:name "Jakub Klímek" .
 
-_:genid14 sdo:affiliation _:genid15 .
+_:genid15 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
 
-_:genid15 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
-
-_:genid14 foaf:name "David Browning" .
-
-_:genid16 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
+_:genid16 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
 
 _:genid17 sdo:affiliation _:genid18 .
 
-_:genid18 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
+_:genid18 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
 
-_:genid17 foaf:name "David Browning" .
+_:genid17 foaf:name "Rufus Pollock" .
 
 _:genid19 foaf:homepage <https://agbeltran.github.io> ;
 	sdo:affiliation _:genid20 .
@@ -850,56 +847,59 @@ _:genid20 foaf:homepage <http://stfc.ac.uk> ;
 _:genid19 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
 	foaf:name "Alejandra Gonzalez-Beltran" .
 
-_:genid21 foaf:homepage <https://jakub.klímek.com/> ;
+_:genid21 sdo:affiliation _:genid22 .
+
+_:genid22 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
+
+_:genid21 foaf:name "David Browning" .
+
+_:genid23 foaf:homepage <http://www.w3.org/People/all#phila> ;
+	sdo:affiliation <http://www.w3.org/data#W3C> ;
+	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+	foaf:name "Phil Archer" .
+
+_:genid24 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
+
+_:genid25 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+	foaf:name "Shuji Kamitsuna" .
+
+_:genid26 sdo:affiliation _:genid27 .
+
+_:genid27 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
+
+_:genid26 foaf:name "Rufus Pollock" .
+
+_:genid28 foaf:homepage <http://www.w3.org/People/all#phila> ;
+	sdo:affiliation <http://www.w3.org/data#W3C> ;
+	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+	foaf:name "Phil Archer" .
+
+_:genid29 foaf:homepage <https://jakub.klímek.com/> ;
 	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
 	foaf:name "Jakub Klímek" .
 
-_:genid22 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
-
-_:genid23 sdo:affiliation _:genid24 .
-
-_:genid24 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
-
-_:genid23 foaf:name "David Browning" .
-
-_:genid25 sdo:affiliation _:genid26 .
-
-_:genid26 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid25 foaf:name "Rufus Pollock" .
-
-_:genid27 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
-
-_:genid28 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
-	foaf:name "Shuji Kamitsuna" .
-
-_:genid29 sdo:affiliation _:genid30 .
-
-_:genid30 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid29 foaf:name "Rufus Pollock" .
+_:genid30 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
 
 _:genid31 foaf:homepage <http://makxdekkers.com/> ;
 	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 	foaf:name "Makx Dekkers" .
 
-_:genid32 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid33 .
+_:genid32 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+	foaf:name "Shuji Kamitsuna" .
 
-_:genid33 foaf:homepage <http://stfc.ac.uk> ;
+_:genid33 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid34 .
+
+_:genid34 foaf:homepage <http://stfc.ac.uk> ;
 	foaf:name "Science and Technology Facilities Council, UK" .
 
-_:genid32 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+_:genid33 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
 	foaf:name "Alejandra Gonzalez-Beltran" .
-
-_:genid34 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
 
 _:genid35 foaf:homepage <http://www.w3.org/People/all#phila> ;
 	sdo:affiliation <http://www.w3.org/data#W3C> ;
@@ -908,268 +908,268 @@ _:genid35 foaf:homepage <http://www.w3.org/People/all#phila> ;
 
 _:genid36 sdo:affiliation _:genid37 .
 
-_:genid37 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
-
-_:genid36 foaf:name "David Browning" .
-
-_:genid38 foaf:homepage <http://www.w3.org/People/all#phila> ;
-	sdo:affiliation <http://www.w3.org/data#W3C> ;
-	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
-	foaf:name "Phil Archer" .
-
-_:genid39 sdo:affiliation _:genid40 .
-
-_:genid40 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+_:genid37 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
 	foaf:name "European Commission, DG DIGIT" .
 
-_:genid39 foaf:name "Vassilios Peristeras" .
+_:genid36 foaf:name "Vassilios Peristeras" .
 
-_:genid41 sdo:affiliation _:genid42 .
+_:genid38 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
 
-_:genid42 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
+_:genid39 foaf:homepage <http://www.w3.org/People/all#phila> ;
+	sdo:affiliation <http://www.w3.org/data#W3C> ;
+	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+	foaf:name "Phil Archer" .
 
-_:genid41 foaf:name "David Browning" .
+_:genid40 sdo:affiliation _:genid41 .
 
-_:genid43 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
+_:genid41 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+	foaf:name "European Commission, DG DIGIT" .
 
-_:genid44 foaf:homepage <http://makxdekkers.com/> ;
-	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
-	foaf:name "Makx Dekkers" .
+_:genid40 foaf:name "Vassilios Peristeras" .
 
-_:genid45 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
-	foaf:name "Shuji Kamitsuna" .
+_:genid42 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
 
-_:genid46 sdo:affiliation _:genid47 .
+_:genid43 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
 
-_:genid47 foaf:homepage <http://okfn.org> ;
+_:genid44 sdo:affiliation _:genid45 .
+
+_:genid45 foaf:homepage <http://okfn.org> ;
 	foaf:name "Open Knowledge Foundation" .
 
-_:genid46 foaf:name "Rufus Pollock" .
+_:genid44 foaf:name "Rufus Pollock" .
 
-_:genid48 foaf:homepage <http://makxdekkers.com/> ;
+_:genid46 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+	foaf:name "Shuji Kamitsuna" .
+
+_:genid47 foaf:homepage <http://makxdekkers.com/> ;
 	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 	foaf:name "Makx Dekkers" .
 
-_:genid49 foaf:homepage <http://www.w3.org/People/all#phila> ;
+_:genid48 foaf:homepage <http://www.w3.org/People/all#phila> ;
 	sdo:affiliation <http://www.w3.org/data#W3C> ;
 	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
 	foaf:name "Phil Archer" .
 
-_:genid50 foaf:homepage <http://www.w3.org/People/all#phila> ;
-	sdo:affiliation <http://www.w3.org/data#W3C> ;
-	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
-	foaf:name "Phil Archer" .
+_:genid49 foaf:homepage <http://makxdekkers.com/> ;
+	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
+	foaf:name "Makx Dekkers" .
 
-_:genid51 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
+_:genid50 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
 
-_:genid52 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
+_:genid51 sdo:affiliation _:genid52 .
+
+_:genid52 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
+
+_:genid51 foaf:name "David Browning" .
 
 _:genid53 sdo:affiliation _:genid54 .
 
-_:genid54 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+_:genid54 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
+
+_:genid53 foaf:name "David Browning" .
+
+_:genid55 foaf:homepage <http://www.w3.org/People/all#phila> ;
+	sdo:affiliation <http://www.w3.org/data#W3C> ;
+	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+	foaf:name "Phil Archer" .
+
+_:genid56 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
+
+_:genid57 sdo:affiliation _:genid58 .
+
+_:genid58 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
 	foaf:name "European Commission, DG DIGIT" .
 
-_:genid53 foaf:name "Vassilios Peristeras" .
-
-_:genid55 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid56 .
-
-_:genid56 foaf:homepage <http://stfc.ac.uk> ;
-	foaf:name "Science and Technology Facilities Council, UK" .
-
-_:genid55 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-	foaf:name "Alejandra Gonzalez-Beltran" .
-
-_:genid57 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
-	foaf:name "Shuji Kamitsuna" .
-
-_:genid58 foaf:homepage <http://makxdekkers.com/> ;
-	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
-	foaf:name "Makx Dekkers" .
+_:genid57 foaf:name "Vassilios Peristeras" .
 
 _:genid59 foaf:homepage <http://www.w3.org/People/all#phila> ;
 	sdo:affiliation <http://www.w3.org/data#W3C> ;
 	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
 	foaf:name "Phil Archer" .
 
-_:genid60 foaf:homepage <https://jakub.klímek.com/> ;
-	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
-	foaf:name "Jakub Klímek" .
+_:genid60 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid61 .
 
-_:genid61 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
+_:genid61 foaf:homepage <http://stfc.ac.uk> ;
+	foaf:name "Science and Technology Facilities Council, UK" .
 
-_:genid62 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
+_:genid60 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+	foaf:name "Alejandra Gonzalez-Beltran" .
+
+_:genid62 foaf:homepage <http://makxdekkers.com/> ;
+	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
+	foaf:name "Makx Dekkers" .
 
 _:genid63 sdo:affiliation _:genid64 .
 
-_:genid64 foaf:homepage <http://www.refinitiv.com> ;
-	foaf:name "Refinitiv" .
+_:genid64 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
 
-_:genid63 foaf:name "David Browning" .
+_:genid63 foaf:name "Rufus Pollock" .
 
 _:genid65 sdo:affiliation _:genid66 .
 
-_:genid66 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid65 foaf:name "Rufus Pollock" .
-
-_:genid67 sdo:affiliation _:genid68 .
-
-_:genid68 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid67 foaf:name "Rufus Pollock" .
-
-_:genid69 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
-
-_:genid70 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
-
-_:genid71 sdo:affiliation _:genid72 .
-
-_:genid72 foaf:homepage <http://www.refinitiv.com> ;
+_:genid66 foaf:homepage <http://www.refinitiv.com> ;
 	foaf:name "Refinitiv" .
 
-_:genid71 foaf:name "David Browning" .
+_:genid65 foaf:name "David Browning" .
 
-_:genid73 foaf:homepage <http://www.w3.org/2011/gld/> ;
+_:genid67 foaf:homepage <http://www.w3.org/2011/gld/> ;
 	foaf:name "Government Linked Data WG" .
 
-_:genid74 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
+_:genid68 sdo:affiliation _:genid69 .
 
-_:genid75 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
+_:genid69 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
 
-_:genid76 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+_:genid68 foaf:name "Rufus Pollock" .
+
+_:genid70 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
 	foaf:name "Shuji Kamitsuna" .
 
-_:genid77 sdo:affiliation _:genid78 .
+_:genid71 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
 
-_:genid78 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
-	foaf:name "European Commission, DG DIGIT" .
+_:genid72 foaf:homepage <https://jakub.klímek.com/> ;
+	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
+	foaf:name "Jakub Klímek" .
 
-_:genid77 foaf:name "Vassilios Peristeras" .
+_:genid73 foaf:homepage <https://jakub.klímek.com/> ;
+	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
+	foaf:name "Jakub Klímek" .
+
+_:genid74 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid75 .
+
+_:genid75 foaf:homepage <http://stfc.ac.uk> ;
+	foaf:name "Science and Technology Facilities Council, UK" .
+
+_:genid74 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+	foaf:name "Alejandra Gonzalez-Beltran" .
+
+_:genid76 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid77 .
+
+_:genid77 foaf:homepage <http://stfc.ac.uk> ;
+	foaf:name "Science and Technology Facilities Council, UK" .
+
+_:genid76 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+	foaf:name "Alejandra Gonzalez-Beltran" .
+
+_:genid78 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
 
 _:genid79 foaf:homepage <http://makxdekkers.com/> ;
 	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 	foaf:name "Makx Dekkers" .
 
-_:genid80 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
+_:genid80 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
 
 _:genid81 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
 	foaf:name "Shuji Kamitsuna" .
 
-_:genid82 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
-
-_:genid83 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
-
-_:genid84 foaf:homepage <https://jakub.klímek.com/> ;
-	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
-	foaf:name "Jakub Klímek" .
-
-_:genid85 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
-	foaf:name "Andrea Perego" .
-
-_:genid86 foaf:homepage <https://jakub.klímek.com/> ;
-	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
-	foaf:name "Jakub Klímek" .
-
-_:genid87 sdo:affiliation _:genid88 .
-
-_:genid88 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
-	foaf:name "European Commission, DG DIGIT" .
-
-_:genid87 foaf:name "Vassilios Peristeras" .
-
-_:genid89 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
-
-_:genid90 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid91 .
-
-_:genid91 foaf:homepage <http://stfc.ac.uk> ;
-	foaf:name "Science and Technology Facilities Council, UK" .
-
-_:genid90 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-	foaf:name "Alejandra Gonzalez-Beltran" .
-
-_:genid92 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
-
-_:genid93 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid94 .
-
-_:genid94 foaf:homepage <http://stfc.ac.uk> ;
-	foaf:name "Science and Technology Facilities Council, UK" .
-
-_:genid93 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-	foaf:name "Alejandra Gonzalez-Beltran" .
-
-_:genid95 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+_:genid82 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
 	foaf:name "Shuji Kamitsuna" .
 
-_:genid96 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
-	foaf:name "Shuji Kamitsuna" .
-
-_:genid97 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+_:genid83 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
 	foaf:name "Fadi Maali" .
 
-_:genid98 foaf:homepage <http://makxdekkers.com/> ;
+_:genid84 foaf:homepage <http://makxdekkers.com/> ;
 	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 	foaf:name "Makx Dekkers" .
 
-_:genid99 foaf:homepage <https://jakub.klímek.com/> ;
-	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
-	foaf:name "Jakub Klímek" .
+_:genid85 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
 
-_:genid100 foaf:homepage <http://www.w3.org/People/all#phila> ;
-	sdo:affiliation <http://www.w3.org/data#W3C> ;
-	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
-	foaf:name "Phil Archer" .
+_:genid86 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
 
-_:genid101 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
+_:genid87 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
 
-_:genid102 foaf:homepage <https://jakub.klímek.com/> ;
-	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
-	foaf:name "Jakub Klímek" .
-
-_:genid103 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+_:genid88 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
 	foaf:name "Shuji Kamitsuna" .
 
-_:genid104 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+_:genid89 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
+
+_:genid90 sdo:affiliation _:genid91 .
+
+_:genid91 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+	foaf:name "European Commission, DG DIGIT" .
+
+_:genid90 foaf:name "Vassilios Peristeras" .
+
+_:genid92 foaf:homepage <https://jakub.klímek.com/> ;
+	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
+	foaf:name "Jakub Klímek" .
+
+_:genid93 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
+
+_:genid94 foaf:homepage <https://jakub.klímek.com/> ;
+	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
+	foaf:name "Jakub Klímek" .
+
+_:genid95 foaf:homepage <http://makxdekkers.com/> ;
+	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
+	foaf:name "Makx Dekkers" .
+
+_:genid96 sdo:affiliation _:genid97 .
+
+_:genid97 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+	foaf:name "European Commission, DG DIGIT" .
+
+_:genid96 foaf:name "Vassilios Peristeras" .
+
+_:genid98 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
+
+_:genid99 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
+
+_:genid100 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
 	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
 	foaf:name "Riccardo Albertoni" .
 
-_:genid105 sdo:affiliation _:genid106 .
+_:genid101 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
 
-_:genid106 foaf:homepage <http://okfn.org> ;
+_:genid102 sdo:affiliation _:genid103 .
+
+_:genid103 foaf:homepage <http://okfn.org> ;
 	foaf:name "Open Knowledge Foundation" .
 
-_:genid105 foaf:name "Rufus Pollock" .
+_:genid102 foaf:name "Rufus Pollock" .
 
-_:genid107 foaf:homepage <http://www.w3.org/People/all#phila> ;
-	sdo:affiliation <http://www.w3.org/data#W3C> ;
-	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
-	foaf:name "Phil Archer" .
+_:genid104 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
+
+_:genid105 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
+
+_:genid106 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
+
+_:genid107 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
+	foaf:name "Riccardo Albertoni" .
 
 _:genid108 sdo:affiliation _:genid109 .
 
@@ -1178,294 +1178,294 @@ _:genid109 foaf:homepage <http://www.refinitiv.com> ;
 
 _:genid108 foaf:name "David Browning" .
 
-_:genid110 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+_:genid110 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
+	foaf:name "Fadi Maali" .
+
+_:genid111 foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/> ;
+	foaf:name "Shuji Kamitsuna" .
+
+_:genid112 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
 	foaf:name "Ghislain Auguste Atemezing" .
 
-_:genid111 foaf:homepage <http://www.w3.org/2011/gld/> ;
+_:genid113 foaf:homepage <http://www.w3.org/2011/gld/> ;
 	foaf:name "Government Linked Data WG" .
 
-_:genid112 sdo:affiliation _:genid113 .
-
-_:genid113 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid112 foaf:name "Rufus Pollock" .
-
-_:genid114 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
+_:genid114 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
 
 _:genid115 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
 	foaf:name "Ghislain Auguste Atemezing" .
 
-_:genid116 foaf:homepage <https://jakub.klímek.com/> ;
+_:genid116 sdo:affiliation _:genid117 .
+
+_:genid117 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
+
+_:genid116 foaf:name "Rufus Pollock" .
+
+_:genid118 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid119 .
+
+_:genid119 foaf:homepage <http://stfc.ac.uk> ;
+	foaf:name "Science and Technology Facilities Council, UK" .
+
+_:genid118 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+	foaf:name "Alejandra Gonzalez-Beltran" .
+
+_:genid120 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
+	foaf:name "Ghislain Auguste Atemezing" .
+
+_:genid121 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
+	foaf:name "Andrea Perego" .
+
+_:genid122 foaf:homepage <https://jakub.klímek.com/> ;
 	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
 	foaf:name "Jakub Klímek" .
 
-_:genid117 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
-
-_:genid118 sdo:affiliation _:genid119 .
-
-_:genid119 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
-	foaf:name "European Commission, DG DIGIT" .
-
-_:genid118 foaf:name "Vassilios Peristeras" .
-
-_:genid120 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid121 .
-
-_:genid121 foaf:homepage <http://stfc.ac.uk> ;
-	foaf:name "Science and Technology Facilities Council, UK" .
-
-_:genid120 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-	foaf:name "Alejandra Gonzalez-Beltran" .
-
-_:genid122 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
-
 _:genid123 sdo:affiliation _:genid124 .
 
-_:genid124 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
-	foaf:name "European Commission, DG DIGIT" .
+_:genid124 foaf:homepage <http://okfn.org> ;
+	foaf:name "Open Knowledge Foundation" .
 
-_:genid123 foaf:name "Vassilios Peristeras" .
+_:genid123 foaf:name "Rufus Pollock" .
 
-_:genid125 foaf:homepage <http://makxdekkers.com/> ;
-	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
-	foaf:name "Makx Dekkers" .
+_:genid125 sdo:affiliation _:genid126 .
 
-_:genid126 sdo:affiliation _:genid127 .
+_:genid126 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
 
-_:genid127 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
-	foaf:name "European Commission, DG DIGIT" .
+_:genid125 foaf:name "David Browning" .
 
-_:genid126 foaf:name "Vassilios Peristeras" .
+_:genid127 foaf:homepage <http://www.w3.org/2011/gld/> ;
+	foaf:name "Government Linked Data WG" .
 
-_:genid128 foaf:homepage <http://www.w3.org/People/all#phila> ;
-	sdo:affiliation <http://www.w3.org/data#W3C> ;
-	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
-	foaf:name "Phil Archer" .
+_:genid128 foaf:name "Richard Cyganiak" .
 
-_:genid129 foaf:name "Richard Cyganiak" .
+_:genid129 foaf:name "Martin Alvarez-Espinar" .
 
 _:genid130 foaf:name "Marios Meimaris" .
 
 _:genid131 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid132 foaf:name "Marios Meimaris" .
+_:genid132 foaf:name "John Erickson" .
 
-_:genid133 foaf:name "Richard Cyganiak" .
+_:genid133 foaf:name "Marios Meimaris" .
 
 _:genid134 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid135 foaf:name "Boris Villazón-Terrazas" .
+_:genid135 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid136 foaf:name "Martin Alvarez-Espinar" .
+_:genid136 foaf:name "Marios Meimaris" .
 
-_:genid137 foaf:name "Boris Villazón-Terrazas" .
+_:genid137 foaf:name "Richard Cyganiak" .
 
-_:genid138 foaf:name "John Erickson" .
+_:genid138 foaf:name "Richard Cyganiak" .
 
-_:genid139 foaf:name "Richard Cyganiak" .
+_:genid139 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid140 foaf:name "Richard Cyganiak" .
+_:genid140 foaf:name "John Erickson" .
 
 _:genid141 foaf:name "Marios Meimaris" .
 
-_:genid142 foaf:name "John Erickson" .
+_:genid142 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid143 foaf:name "Boris Villazón-Terrazas" .
+_:genid143 foaf:name "Richard Cyganiak" .
 
-_:genid144 foaf:name "John Erickson" .
+_:genid144 foaf:name "Marios Meimaris" .
 
-_:genid145 foaf:name "Boris Villazón-Terrazas" .
+_:genid145 foaf:name "Marios Meimaris" .
 
 _:genid146 foaf:name "John Erickson" .
 
 _:genid147 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid148 foaf:name "John Erickson" .
+_:genid148 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid149 foaf:name "Boris Villazón-Terrazas" .
+_:genid149 foaf:name "John Erickson" .
 
-_:genid150 foaf:name "Richard Cyganiak" .
+_:genid150 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid151 foaf:name "Martin Alvarez-Espinar" .
+_:genid151 foaf:name "John Erickson" .
 
-_:genid152 foaf:name "John Erickson" .
+_:genid152 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid153 foaf:name "Boris Villazón-Terrazas" .
+_:genid153 foaf:name "Martin Alvarez-Espinar" .
 
 _:genid154 foaf:name "Richard Cyganiak" .
 
-_:genid155 foaf:name "Richard Cyganiak" .
+_:genid155 foaf:name "Boris Villazón-Terrazas" .
 
 _:genid156 foaf:name "John Erickson" .
 
-_:genid157 foaf:name "Martin Alvarez-Espinar" .
+_:genid157 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid158 foaf:name "Marios Meimaris" .
+_:genid158 foaf:name "Martin Alvarez-Espinar" .
 
-_:genid159 foaf:name "Martin Alvarez-Espinar" .
+_:genid159 foaf:name "Richard Cyganiak" .
 
-_:genid160 foaf:name "Marios Meimaris" .
+_:genid160 foaf:name "John Erickson" .
 
-_:genid161 foaf:name "Martin Alvarez-Espinar" .
+_:genid161 foaf:name "Richard Cyganiak" .
 
 _:genid162 foaf:name "Marios Meimaris" .
 
-_:genid163 foaf:name "Marios Meimaris" .
+_:genid163 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid164 foaf:name "Richard Cyganiak" .
+_:genid164 foaf:name "Boris Villazón-Terrazas" .
 
-_:genid165 foaf:name "John Erickson" .
+_:genid165 foaf:name "Richard Cyganiak" .
 
-_:genid166 foaf:name "Martin Alvarez-Espinar" .
+_:genid166 foaf:name "John Erickson" .
 
-_:genid167 foaf:name "Boris Villazón-Terrazas" .
+_:genid167 foaf:name "Marios Meimaris" .
 
-_:genid168 foaf:name "Marios Meimaris" .
+_:genid168 a foaf:Person ;
+	sdo:affiliation _:genid169 .
 
-_:genid169 a foaf:Person ;
-	sdo:affiliation _:genid170 .
-
-_:genid170 foaf:homepage <https://csiro.au> ;
+_:genid169 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid169 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid168 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid171 a foaf:Person ;
-	sdo:affiliation _:genid172 .
+_:genid170 a foaf:Person ;
+	sdo:affiliation _:genid171 .
 
-_:genid172 foaf:homepage <https://csiro.au> ;
+_:genid171 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid171 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid170 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid173 a foaf:Person ;
-	sdo:affiliation _:genid174 .
+_:genid172 a foaf:Person ;
+	sdo:affiliation _:genid173 .
 
-_:genid174 foaf:homepage <https://csiro.au> ;
+_:genid173 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid173 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid172 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid175 a foaf:Person ;
-	sdo:affiliation _:genid176 .
+_:genid174 a foaf:Person ;
+	sdo:affiliation _:genid175 .
 
-_:genid176 foaf:homepage <https://csiro.au> ;
+_:genid175 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid175 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid174 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid177 a foaf:Person ;
-	sdo:affiliation _:genid178 .
+_:genid176 a foaf:Person ;
+	sdo:affiliation _:genid177 .
 
-_:genid178 foaf:homepage <https://csiro.au> ;
+_:genid177 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid177 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid176 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid179 a foaf:Person ;
-	sdo:affiliation _:genid180 .
+_:genid178 a foaf:Person ;
+	sdo:affiliation _:genid179 .
 
-_:genid180 foaf:homepage <https://csiro.au> ;
+_:genid179 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid179 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid178 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid181 a foaf:Person ;
-	sdo:affiliation _:genid182 .
+_:genid180 a foaf:Person ;
+	sdo:affiliation _:genid181 .
 
-_:genid182 foaf:homepage <https://csiro.au> ;
+_:genid181 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid181 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid180 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid183 a foaf:Person ;
-	sdo:affiliation _:genid184 .
+_:genid182 a foaf:Person ;
+	sdo:affiliation _:genid183 .
 
-_:genid184 foaf:homepage <https://csiro.au> ;
+_:genid183 foaf:homepage <https://csiro.au> ;
 	foaf:name "Commonwealth Scientific and Industrial Research Organisation" .
 
-_:genid183 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
+_:genid182 rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 	foaf:name "Simon J D Cox" ;
 	foaf:workInfoHomepage <http://people.csiro.au/Simon-Cox> .
 
-_:genid185 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
+_:genid184 sdo:affiliation _:genid185 .
 
-_:genid186 foaf:homepage <https://agbeltran.github.io> ;
-	sdo:affiliation _:genid187 .
+_:genid185 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
 
-_:genid187 foaf:homepage <http://stfc.ac.uk> ;
+_:genid184 foaf:name "David Browning" .
+
+_:genid186 foaf:homepage <https://jakub.klímek.com/> ;
+	rdfs:seeAlso <https://jakub.klímek.com/#me> ;
+	foaf:name "Jakub Klímek" .
+
+_:genid187 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid188 .
+
+_:genid188 foaf:homepage <http://stfc.ac.uk> ;
 	foaf:name "Science and Technology Facilities Council, UK" .
 
-_:genid186 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+_:genid187 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
 	foaf:name "Alejandra Gonzalez-Beltran" .
 
-_:genid188 foaf:homepage <http://www.w3.org/2011/gld/> ;
-	foaf:name "Government Linked Data WG" .
+_:genid189 sdo:affiliation _:genid190 .
 
-_:genid189 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
+_:genid190 foaf:homepage <http://www.refinitiv.com> ;
+	foaf:name "Refinitiv" .
 
-_:genid190 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
+_:genid189 foaf:name "David Browning" .
+
+_:genid191 foaf:homepage <http://www.andrea-perego.name/foaf/#me> ;
 	rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
 	foaf:name "Andrea Perego" .
 
-_:genid191 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
+_:genid192 sdo:affiliation _:genid193 .
 
-_:genid192 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
+_:genid193 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+	foaf:name "European Commission, DG DIGIT" .
 
-_:genid193 rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
-	foaf:name "Fadi Maali" .
+_:genid192 foaf:name "Vassilios Peristeras" .
 
-_:genid194 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
-
-_:genid195 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
-	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
-	foaf:name "Riccardo Albertoni" .
-
-_:genid196 sdo:affiliation _:genid197 .
-
-_:genid197 foaf:homepage <http://okfn.org> ;
-	foaf:name "Open Knowledge Foundation" .
-
-_:genid196 foaf:name "Rufus Pollock" .
-
-_:genid198 rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
-	foaf:name "Ghislain Auguste Atemezing" .
-
-_:genid199 foaf:homepage <http://makxdekkers.com/> ;
+_:genid194 foaf:homepage <http://makxdekkers.com/> ;
 	rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 	foaf:name "Makx Dekkers" .
 
-_:genid200 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
+_:genid195 foaf:homepage <http://www.w3.org/People/all#phila> ;
+	sdo:affiliation <http://www.w3.org/data#W3C> ;
+	rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+	foaf:name "Phil Archer" .
+
+_:genid196 foaf:homepage <https://agbeltran.github.io> ;
+	sdo:affiliation _:genid197 .
+
+_:genid197 foaf:homepage <http://stfc.ac.uk> ;
+	foaf:name "Science and Technology Facilities Council, UK" .
+
+_:genid196 rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+	foaf:name "Alejandra Gonzalez-Beltran" .
+
+_:genid198 foaf:homepage <http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni> , <https://w3id.org/people/ralbertoni/> ;
 	rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
 	foaf:name "Riccardo Albertoni" .
+
+_:genid199 sdo:affiliation _:genid200 .
+
+_:genid200 foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
+	foaf:name "European Commission, DG DIGIT" .
+
+_:genid199 foaf:name "Vassilios Peristeras" .
 
 _:genid201 sdo:affiliation _:genid202 .
 
@@ -1483,8 +1483,8 @@ _:genid201 foaf:name "Vassilios Peristeras" .
 # 
 # 
 
-dcat:theme rdfs:label "tema"@it ;
-	skos:definition "A main category of the resource. A resource can have multiple themes."@en ;
+dcat:theme skos:definition "A main category of the resource. A resource can have multiple themes."@en ;
+	rdfs:label "tema"@it ;
 	rdfs:comment "La categoría principal del recurso. Un recurso puede tener varios temas."@es ;
 	skos:definition "Hlavní téma zdroje. Zdroj může mít více témat."@cs ;
 	rdfs:comment "التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد."@ar , "La categoria principale della risorsa. Una risorsa può avere più temi."@it ;
@@ -1493,8 +1493,8 @@ dcat:theme rdfs:label "tema"@it ;
 	skos:scopeNote "Il set di concetti skos usati per categorizzare le risorse sono organizzati in skos:ConceptScheme che descrive tutte le categorie e le loro relazioni nel catalogo."@it ;
 	rdfs:comment "データセットの主要カテゴリー。データセットは複数のテーマを持つことができます。"@ja , "Hlavní téma zdroje. Zdroj může mít více témat."@cs ;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-	rdfs:label "Θέμα"@el , "tema"@es ;
 	skos:definition "La catégorie principale de la ressource. Une ressource peut avoir plusieurs thèmes."@fr ;
+	rdfs:label "tema"@es , "Θέμα"@el ;
 	skos:editorialNote "Status: English Definition text modified by DCAT revision team, all except for Italian and Czech translations are pending."@en ;
 	rdfs:label "thème"@fr ;
 	skos:scopeNote "The set of skos:Concepts used to categorize the resources are organized in a skos:ConceptScheme describing all the categories and their relations in the catalog."@en ;
@@ -1507,8 +1507,8 @@ dcat:theme rdfs:label "tema"@it ;
 	rdfs:comment "Η κύρια κατηγορία του συνόλου δεδομένων. Ένα σύνολο δεδομένων δύναται να έχει πολλαπλά θέματα."@el ;
 	skos:definition "التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد."@ar ;
 	skos:scopeNote "Το σετ των skos:Concepts που χρησιμοποιείται για να κατηγοριοποιήσει τα σύνολα δεδομένων είναι οργανωμένο εντός ενός skos:ConceptScheme που περιγράφει όλες τις κατηγορίες και τις σχέσεις αυτών στον κατάλογο."@el ;
-	rdfs:label "téma"@cs ;
 	skos:definition "La categoria principale della risorsa. Una risorsa può avere più temi."@it ;
+	rdfs:label "téma"@cs ;
 	skos:scopeNote "Sada instancí třídy skos:Concept použitá pro kategorizaci zdrojů je organizována do schématu konceptů skos:ConceptScheme, které popisuje všechny kategorie v katalogu a jejich vztahy."@cs .
 # 
 # 
