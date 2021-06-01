@@ -511,6 +511,11 @@ dcatext:guideline rdf:type owl:ObjectProperty ;
                   oboInOwl:hasAlternativeId "http://purl.org/ejp-rd/vocabulary/guideline"^^xsd:anyURI .
 
 
+###  http://purl.org/biosemantics-lumc/ontologies/dcat-extension/investigation
+dcatext:investigation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf dcat:catalog .
+
+
 ###  http://purl.org/biosemantics-lumc/ontologies/dcat-extension/mapping
 dcatext:mapping rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf dct:hasPart ;
@@ -538,6 +543,11 @@ dcatext:standard rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf dct:hasPart ;
                  rdfs:domain dcat:Catalog ;
                  rdfs:range dcatext:Standard .
+
+
+###  http://purl.org/biosemantics-lumc/ontologies/dcat-extension/study
+dcatext:study rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dct:hasPart .
 
 
 ###  http://purl.org/biosemantics-lumc/ontologies/dcat-extension/workflow
